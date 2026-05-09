@@ -1,0 +1,17 @@
+{
+    "name": "utp/laboratorio-autoload",
+    "description": "Implementación de Autoload PSR-4 con Composer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Utp\\LaboratorioAutoload\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luis De León",
+            "email": "luiscdl2210@gmail.com"
+        }
+    ],
+    "require": {}
+}
