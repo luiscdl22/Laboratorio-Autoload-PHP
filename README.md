@@ -1,34 +1,41 @@
-Implementacion de Autoload PSR-4 con Composer
-Este proyecto contiene la configuracion necesaria para la gestion de clases en PHP mediante el estandar PSR-4.
+# IMPLEMENTACIÓN DE AUTOLOAD PSR-4 CON COMPOSER
 
-Guia de Instalacion
-Para ejecutar este proyecto, es necesario generar el cargador de clases localmente siguiendo estos pasos:
+---
 
-Asegurese de tener instalado Composer en su sistema.
+## 1. INTRODUCCIÓN
 
-Abra una terminal en la raiz del proyecto.
+En este proyecto se presenta la implementación de un sistema de carga automática de clases (Autoload) utilizando el estándar PSR-4. Se explora la gestión de dependencias con Composer y la organización de Namespaces para optimizar el desarrollo en PHP.
 
-Ejecute el siguiente comando:
+---
 
-composer dump-autoload
+## 2. REQUISITOS PREVIOS
 
-Estructura de Archivos
-La organizacion del proyecto se basa en la siguiente jerarquia:
+Para la ejecución de este laboratorio se configuró el siguiente entorno:
 
-Carpeta src/: Contiene las clases del sistema.
+* **Sistema Operativo:** Windows 11
+* **Servidor Local:** WampServer
+* **Lenguaje:** PHP 8.3
+* **Gestor de Dependencias:** Composer
+* **Editor de Código:** Visual Studio Code
 
-Archivo composer.json: Define el mapeo del namespace Utp\LaboratorioAutoload hacia la carpeta src/.
+---
 
-Archivo index.php: Punto de entrada que inicializa el autoloader de Composer.
+## 3. INSTALACIÓN IMPLEMENTADA
 
-Archivo .gitignore: Configurado para excluir la carpeta vendor.
+1. **Configuración de Composer:** `composer init`
+2. **Definición de PSR-4:** Mapeo de `Utp\LaboratorioAutoload` hacia la carpeta `src/`.
+3. **Generación de Autoloader:** `composer dump-autoload`
+4. **Prueba de ejecución:** Instancia de clases en `index.php`.
 
-Conclusiones Tecnicas
-Mantenibilidad: La carga automatica elimina la necesidad de gestionar archivos manualmente mediante include o require.
+---
 
-Eficiencia: El uso de Lazy Loading asegura que solo se carguen las clases que son instanciadas en tiempo de ejecucion.
+## 4. CONCLUSIONES TÉCNICAS
 
-Estandarizacion: El cumplimiento de PSR-4 permite la interoperabilidad y el uso de las mejores practicas de la industria en PHP.
+* **Mantenibilidad:** La carga automática elimina la gestión manual de archivos mediante inclusiones tradicionales.
+* **Eficiencia:** El uso de Lazy Loading asegura que solo se carguen las clases instanciadas en tiempo de ejecución.
+* **Estandarización:** El cumplimiento de PSR-4 garantiza la interoperabilidad y el uso de mejores prácticas.
 
-Autor: Luis De León
-Curso: Desarrollo de Software VII
+---
+**Autor:** Luis De León  
+**Curso:** Desarrollo de Software VII  
+**Profesora:** Irina Fong 
