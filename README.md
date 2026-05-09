@@ -1,35 +1,34 @@
-Laboratorio: Implementación de Autoload PSR-4 con Composer
-Este proyecto cumple con los requerimientos técnicos del laboratorio para la gestión automatizada de clases en PHP, utilizando el estándar PSR-4.
+Implementacion de Autoload PSR-4 con Composer
+Este proyecto contiene la configuracion necesaria para la gestion de clases en PHP mediante el estandar PSR-4.
 
-Guía de Instalación
-Para que el proyecto funcione correctamente después de clonar el repositorio, se debe regenerar el mapa de clases localmente (Higiene del Repositorio):
+Guia de Instalacion
+Para ejecutar este proyecto, es necesario generar el cargador de clases localmente siguiendo estos pasos:
 
-Asegúrese de tener instalado Composer.
+Asegurese de tener instalado Composer en su sistema.
 
-Ejecute en la terminal de la raíz del proyecto el siguiente comando:
+Abra una terminal en la raiz del proyecto.
+
+Ejecute el siguiente comando:
 
 composer dump-autoload
 
-Estructura de Archivos y Namespaces
-Siguiendo los lineamientos de la guía, la arquitectura se organiza de la siguiente manera:
+Estructura de Archivos
+La organizacion del proyecto se basa en la siguiente jerarquia:
 
-Namespace Raíz: Utp\LaboratorioAutoload
+Carpeta src/: Contiene las clases del sistema.
 
-Directorio de Clases: Carpeta src/ (Mapeado en composer.json)
+Archivo composer.json: Define el mapeo del namespace Utp\LaboratorioAutoload hacia la carpeta src/.
 
-Clase de Prueba: src/Usuario.php
+Archivo index.php: Punto de entrada que inicializa el autoloader de Composer.
 
-Punto de Entrada: index.php (Implementación de vendor/autoload.php y uso de la palabra reservada use)
+Archivo .gitignore: Configurado para excluir la carpeta vendor.
 
-Análisis Comparativo (Conclusiones)
-Basado en la implementación realizada, se concluyen las siguientes ventajas técnicas:
+Conclusiones Tecnicas
+Mantenibilidad: La carga automatica elimina la necesidad de gestionar archivos manualmente mediante include o require.
 
-Mantenibilidad: Se elimina la dependencia de inclusiones manuales. Al añadir nuevas clases en la carpeta src/, el sistema las reconoce automáticamente sin modificar archivos globales.
+Eficiencia: El uso de Lazy Loading asegura que solo se carguen las clases que son instanciadas en tiempo de ejecucion.
 
-Eficiencia de Memoria: Mediante el Lazy Loading, Composer solo carga los archivos de las clases cuando son instanciadas, optimizando el rendimiento frente a las inclusiones tradicionales.
-
-Estandarización: El cumplimiento de PSR-4 garantiza la interoperabilidad, permitiendo que el proyecto sea escalable y compatible con los estándares de la industria.
+Estandarizacion: El cumplimiento de PSR-4 permite la interoperabilidad y el uso de las mejores practicas de la industria en PHP.
 
 Autor: Luis De León
 Curso: Desarrollo de Software VII
-Institución: Universidad Tecnológica de Panamá
